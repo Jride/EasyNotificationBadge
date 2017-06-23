@@ -88,7 +88,7 @@ extension UIView {
         badgeLabel.text = badgeText
         
         //Set font size
-        badgeLabel.font = UIFont.systemFont(ofSize: appearnce.textSize)
+        badgeLabel.font = UIFont(name: appearnce.fontName, size: appearnce.textSize)
         
         badgeLabel.sizeToFit()
         
@@ -260,6 +260,7 @@ class BadgeLabel:UILabel{}
  */
 public struct BadgeAppearnce {
     public var textSize: CGFloat
+    public var fontName: String
     public var textAlignment: NSTextAlignment
     public var borderColor: UIColor
     public var borderWidth: CGFloat
@@ -273,6 +274,7 @@ public struct BadgeAppearnce {
     
     public init() {
         textSize = 12
+        fontName = "HelveticaNeue"
         textAlignment = .center
         backgroundColor = .red
         textColor = .white
